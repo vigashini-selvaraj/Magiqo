@@ -276,6 +276,7 @@ html, body {
 
   /* Hero Split (index.html) Responsive Adjustments */
   .hero-split {
+    height: auto !important;
     min-height: auto !important;
     margin-top: 80px !important;
     padding: 25px 0 35px 0 !important;

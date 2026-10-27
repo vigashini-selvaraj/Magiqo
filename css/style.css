@@ -4,6 +4,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.13/antd.min.css');
 
 :root {
+  color-scheme: light;
   /* Magical Theme (Light) - Sky Blue Uniform Accent */
   --color-primary: #C92A58;
   --color-primary-hover: #A71C44;
@@ -40,6 +41,7 @@
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
   /* Glowing Cosmic Theme (Dark) - Sky Blue Accent */
   --color-primary: #FF5A88;
   --color-primary-hover: #FF7E9F;

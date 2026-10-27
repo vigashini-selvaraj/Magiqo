@@ -102,13 +102,15 @@
       .hero-split {
         position: relative;
         width: 100%;
-        min-height: calc(100vh - 86px);
+        height: calc(100vh - 86px);
+        min-height: 520px;
         margin-top: 86px;
         display: flex;
         align-items: center;
+        justify-content: center;
         background: var(--color-bg);
         overflow: hidden;
-        padding: 40px 0 50px 0;
+        padding: 0;
         box-sizing: border-box;
       }
       .hero-split-container {
@@ -119,43 +121,46 @@
         position: relative;
         z-index: 2;
         width: 100%;
+        max-width: 1350px;
+        margin: 0 auto;
+        padding: 0 24px;
       }
       .hero-split-left {
-        max-width: 600px;
+        max-width: 580px;
       }
       .hero-split-title {
         font-family: var(--font-magic);
-        font-size: clamp(3rem, 4.8vw, 4.6rem);
+        font-size: clamp(2.6rem, 4.2vw, 4.2rem);
         line-height: 1.12;
-        margin: 0 0 18px 0;
+        margin: 0 0 16px 0;
       }
       .hero-split-desc {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         color: var(--color-text-light);
-        line-height: 1.6;
-        margin-bottom: 22px;
+        line-height: 1.55;
+        margin-bottom: 20px;
       }
       .hero-split-cta {
         display: flex;
         gap: 16px;
         flex-wrap: wrap;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
       .hero-split-socialproof {
-        margin-top: 20px;
+        margin-top: 18px;
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 18px;
         border-top: 1px solid var(--color-border);
-        padding-top: 18px;
+        padding-top: 16px;
       }
       .hero-bento-grid {
         position: relative;
-        height: min(490px, 66vh);
+        height: min(450px, 58vh);
         display: grid;
-        grid-template-columns: 1.2fr 1fr;
+        grid-template-columns: 1.18fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 20px;
+        gap: 18px;
       }
       .hero-review-badge {
         position: absolute;
@@ -183,6 +188,7 @@
 
       @media (max-width: 991px) {
         .hero-split {
+          height: auto !important;
           min-height: auto !important;
           margin-top: 80px !important;
           padding: 25px 0 35px 0 !important;
