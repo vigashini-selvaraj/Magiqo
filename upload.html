@@ -20,17 +20,32 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/responsive.css">
   
-  <!-- AOS Animation Library -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  
   <style>
+    html {
+      height: auto !important;
+      overflow-x: hidden;
+    }
+
     body {
       background-color: var(--color-bg);
       color: var(--color-text);
       font-family: var(--font-body);
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      min-height: 100vh;
+      height: auto !important;
+      overflow-x: clip;
+    }
+
+    /* Native Smooth Scroll Reveals */
+    .reveal {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-init {
+      opacity: 0 !important;
+      transform: translateY(28px) !important;
     }
 
     /* Hero Section */
@@ -371,7 +386,7 @@
 
   <!-- 01. Hero Section -->
   <section class="hero-upload">
-    <div class="container" style="position: relative; z-index: 2;" data-aos="fade-up" data-aos-duration="900">
+    <div class="container reveal" style="position: relative; z-index: 2;">
       <div class="pill-badge">
         <i class="fa-solid fa-camera-retro"></i> Magiqo Community Gallery
       </div>
@@ -391,7 +406,7 @@
   <!-- 02. Moments That Matter (Community Gallery) -->
   <section id="gallery" style="padding: 6rem 0; background: var(--color-bg);">
     <div class="container">
-      <div class="text-center" data-aos="fade-up">
+      <div class="text-center reveal">
         <h2 class="section-title" style="font-family: var(--font-magic); font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 800; margin-bottom: 0.75rem;">
           <span class="text-pink">Moments</span> <span class="text-blue">That Matter</span>
         </h2>
@@ -403,7 +418,7 @@
       <div class="equal-height-grid" style="margin-top: 3.5rem;">
         
         <!-- Item 1: Magic -->
-        <div class="masonry-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox('assets/images/pro_classic_magic.jpg', 'The kids couldn\'t stop laughing and gasping! Best birthday party magician ever.')">
+        <div class="masonry-item reveal" onclick="openLightbox('assets/images/pro_classic_magic.jpg', 'The kids couldn\'t stop laughing and gasping! Best birthday party magician ever.')">
           <div class="img-wrapper">
             <img src="assets/images/pro_classic_magic.jpg" alt="Leo's 6th Birthday Magic Show">
             <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -416,7 +431,7 @@
         </div>
 
         <!-- Item 2: Princess -->
-        <div class="masonry-item" data-aos="fade-up" data-aos-delay="150" onclick="openLightbox('assets/images/princess_party_1790842645232.jpg', 'A truly royal fairytale coronation. My daughter cried happy tears!')">
+        <div class="masonry-item reveal" onclick="openLightbox('assets/images/princess_party_1790842645232.jpg', 'A truly royal fairytale coronation. My daughter cried happy tears!')">
           <div class="img-wrapper">
             <img src="assets/images/princess_party_1790842645232.jpg" alt="Mia's Royal Tea Party">
             <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -429,7 +444,7 @@
         </div>
 
         <!-- Item 3: Interactive Magic Show -->
-        <div class="masonry-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox('assets/images/interactive_party_show.jpg', 'So much interactive energy! Every single kid was jumping with delight.')">
+        <div class="masonry-item reveal" onclick="openLightbox('assets/images/interactive_party_show.jpg', 'So much interactive energy! Every single kid was jumping with delight.')">
           <div class="img-wrapper">
             <img src="assets/images/interactive_party_show.jpg" alt="Summer Family Bash">
             <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -442,7 +457,7 @@
         </div>
 
         <!-- Item 4: Superhero -->
-        <div class="masonry-item" data-aos="fade-up" data-aos-delay="250" onclick="openLightbox('assets/images/superhero_party_1790842695325.jpg', 'Hero bootcamp obstacle course was an absolute smash hit!')">
+        <div class="masonry-item reveal" onclick="openLightbox('assets/images/superhero_party_1790842695325.jpg', 'Hero bootcamp obstacle course was an absolute smash hit!')">
           <div class="img-wrapper">
             <img src="assets/images/superhero_party_1790842695325.jpg" alt="Hero Training Party">
             <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -455,7 +470,7 @@
         </div>
 
         <!-- Item 5: Clown & Balloons -->
-        <div class="masonry-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox('assets/images/clown_party_1790842566084.jpg', 'Hilarious slapstick humor! Even the parents were rolling with laughter.')">
+        <div class="masonry-item reveal" onclick="openLightbox('assets/images/clown_party_1790842566084.jpg', 'Hilarious slapstick humor! Even the parents were rolling with laughter.')">
           <div class="img-wrapper">
             <img src="assets/images/clown_party_1790842566084.jpg" alt="Toddler Birthday Giggles">
             <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -468,7 +483,7 @@
         </div>
 
         <!-- Item 6: Balloon Twisting -->
-        <div class="masonry-item" data-aos="fade-up" data-aos-delay="350" onclick="openLightbox('assets/images/service_balloon_twisting.jpg', 'The giant balloon sculptures and wearable crowns blew everyone away!')">
+        <div class="masonry-item reveal" onclick="openLightbox('assets/images/service_balloon_twisting.jpg', 'The giant balloon sculptures and wearable crowns blew everyone away!')">
           <div class="img-wrapper">
             <img src="assets/images/service_balloon_twisting.jpg" alt="Sarah's 5th Birthday Balloon Art">
             <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -491,7 +506,7 @@
       <div class="upload-grid" style="display:grid; grid-template-columns: 1fr 1.25fr; gap: 4rem; align-items: start;">
         
         <!-- Left: Upload Guidelines -->
-        <div data-aos="fade-right" style="background:var(--color-bg); padding:3rem; border-radius:var(--radius-lg); border-left:5px solid var(--color-primary); border-top: 1px solid var(--color-border); border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); box-shadow: 0 15px 35px var(--color-shadow);">
+        <div class="reveal" style="background:var(--color-bg); padding:3rem; border-radius:var(--radius-lg); border-left:5px solid var(--color-primary); border-top: 1px solid var(--color-border); border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); box-shadow: 0 15px 35px var(--color-shadow);">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:1.25rem;">
             <i class="fa-solid fa-shield-halved" style="color:var(--color-primary); font-size:1.6rem;"></i>
             <h3 style="font-size:1.85rem; font-weight:800; color:var(--color-text); margin:0; font-family:var(--font-magic);">
@@ -518,7 +533,7 @@
         </div>
         
         <!-- Right: Form -->
-        <div id="form-container" data-aos="fade-left">
+        <div id="form-container" class="reveal">
           <h2 style="font-family: var(--font-magic); font-size: 2.2rem; font-weight: 800; margin-bottom: 1.5rem;">
             <span class="text-pink">Share Your</span> <span class="text-blue">Moment</span>
           </h2>
@@ -597,7 +612,7 @@
   <!-- 04. Choose Your Celebration -->
   <section id="categories" style="padding: 6rem 0; background: var(--color-bg);">
     <div class="container">
-      <div class="text-center" data-aos="zoom-in">
+      <div class="text-center reveal">
         <h2 class="section-title" style="font-family: var(--font-magic); font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 800; margin-bottom: 0.75rem;">
           <span class="text-pink">Explore by</span> <span class="text-blue">Category</span>
         </h2>
@@ -608,7 +623,7 @@
       
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:2rem; margin-top:3.5rem;">
         
-        <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="category-card reveal">
           <div style="overflow:hidden; height:200px;">
             <img src="assets/images/magic_show_party_1790842468826.jpg" alt="Kids' Magic Parties">
           </div>
@@ -618,7 +633,7 @@
           </div>
         </div>
 
-        <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="category-card reveal">
           <div style="overflow:hidden; height:200px;">
             <img src="assets/images/clown_party_1790842566084.jpg" alt="Toddler Birthday Clowns">
           </div>
@@ -628,7 +643,7 @@
           </div>
         </div>
 
-        <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="category-card reveal">
           <div style="overflow:hidden; height:200px;">
             <img src="assets/images/interactive_party_show.jpg" alt="Special Celebrations">
           </div>
@@ -645,7 +660,7 @@
   <!-- 05. Stories Behind the Smiles -->
   <section id="featured" style="padding: 6rem 0; background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
     <div class="container">
-      <div class="text-center" data-aos="fade-up">
+      <div class="text-center reveal">
         <h2 class="section-title" style="font-family: var(--font-magic); font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 800; margin-bottom: 0.75rem;">
           <span class="text-pink">Stories Behind</span> <span class="text-blue">The Smiles</span>
         </h2>
@@ -654,7 +669,7 @@
         </div>
       </div>
       
-      <div class="feature-card" data-aos="zoom-in-up" data-aos-duration="800">
+      <div class="feature-card reveal">
         <div style="flex:1; min-height:360px; overflow:hidden;">
           <img src="assets/images/about_kids_birthday.jpg" alt="The Incredible Magic Show" style="width:100%; height:100%; object-fit:cover; display:block;">
         </div>
@@ -679,16 +694,16 @@
   <!-- 06. The Entertainer Spotlight -->
   <section id="spotlight" style="padding: 6rem 0; background: var(--color-bg);">
     <div class="container">
-      <div class="text-center" data-aos="fade-up">
+      <div class="text-center reveal">
         <h2 class="section-title" style="font-family: var(--font-magic); font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 800; margin-bottom: 0.75rem;">
           <span class="text-pink">Entertainer</span> <span class="text-blue">Spotlight</span>
         </h2>
-        <div style="text-align:center; max-width:620px; margin:0 auto 2.5rem; color:var(--color-text-light); font-size:1.15rem;" data-aos="fade-up" data-aos-delay="100">
+        <div style="text-align:center; max-width:620px; margin:0 auto 2.5rem; color:var(--color-text-light); font-size:1.15rem;" class="reveal">
           Discover the top performers who bring these extraordinary moments to life. Click to explore specialties.
         </div>
       </div>
 
-      <div class="spotlight-btn-group" data-aos="fade-up" data-aos-delay="150">
+      <div class="spotlight-btn-group reveal">
         <button onclick="showEntertainer('Master Magicians', 'Prepare to be amazed by classic sleight of hand, mentalism, and stage levitation that leaves both kids and adults astonished.')" class="btn btn-outline">Master Magicians</button>
         <button onclick="showEntertainer('Fairytale Princesses', 'Arriving in museum-grade royal gowns with live musical theatre singing, storytelling, and heartwarming coronation tiaras.')" class="btn btn-outline">Royal Princesses</button>
         <button onclick="showEntertainer('Action Heroes', 'High-voltage superhero obstacle courses, stunt agility drills, teamwork games, and official superhero oath ceremonies.')" class="btn btn-outline">Action Heroes</button>
@@ -707,7 +722,7 @@
   <section class="inspiration-section">
     <div class="container">
       <div class="inspiration-grid">
-        <div data-aos="fade-right">
+        <div class="reveal">
           <h2 style="font-family: var(--font-magic); font-size: clamp(2.5rem, 4.5vw, 3.5rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
             <span class="text-pink">Your Memories,</span><br>
             <span class="text-blue">Our Inspiration</span>
@@ -716,7 +731,7 @@
             Every party is unique, and every child's smile is special. We are endlessly inspired by the joy, laughter, and creativity shared by Magiqo families across the country.
           </p>
         </div>
-        <div data-aos="fade-left">
+        <div class="reveal">
           <div class="quote-box">
             <p style="font-size: 1.25rem; line-height: 1.8; font-style:italic; color:var(--color-text); margin-bottom:1.75rem; position:relative; z-index:2;">
               "Seeing the joy and wonder in these shared moments is what drives us. Thank you to every family who welcomes us into their home to create lifelong memories. Your smiles fuel our magic."
@@ -732,7 +747,7 @@
 
   <!-- 10. Official Magiqo Final CTA -->
   <section class="cta-banner-section">
-    <div class="container" data-aos="zoom-in" data-aos-duration="900">
+    <div class="container reveal">
       <h2>Let's Make More Memories</h2>
       <p>Ready to create an unforgettable celebration for your child's next big milestone?</p>
       <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
@@ -765,13 +780,28 @@
 
   <div id="footer"></div>
 
-  <!-- AOS Animation Script -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({
-      once: true,
-      offset: 50,
-      duration: 800,
+    // Bulletproof Native Scroll Reveal System
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealElements = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove('reveal-init');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px 50px 0px' });
+
+        revealElements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top > window.innerHeight) {
+            el.classList.add('reveal-init');
+            observer.observe(el);
+          }
+        });
+      }
     });
   
     function openLightbox(imgUrl, desc) {
